@@ -50,7 +50,15 @@ TEXTURES = {
     "background": pygame.image.load(
         BASE_DIR / "assets" / "graphics" / "background.png"
     ),
-    "tiles": pygame.image.load(BASE_DIR / "assets" / "graphics" / "match3.png"),
+    "tiles": pygame.image.load(
+        BASE_DIR / "assets" / "graphics" / "match3.png"
+    ),
+    "bomb": pygame.image.load(
+        BASE_DIR / "assets" / "graphics" / "bomb.png"
+    ),
+    "color_destroyer": pygame.image.load(
+        BASE_DIR / "assets" / "graphics" /"estrella.png"
+    ),
 }
 
 FRAMES = {"tiles": generate_tile_frames(TEXTURES["tiles"])}
@@ -64,6 +72,7 @@ SOUNDS = {
     "match": pygame.mixer.Sound(BASE_DIR / "assets" / "sounds" / "match.wav"),
     "next-level": pygame.mixer.Sound(BASE_DIR / "assets" / "sounds" / "next-level.wav"),
     "select": pygame.mixer.Sound(BASE_DIR / "assets" / "sounds" / "select.wav"),
+    "no-match": pygame.mixer.Sound(BASE_DIR / "assets" / "sounds" / "next-level.wav"),
 }
 
 pygame.mixer.music.load(BASE_DIR / "assets" / "sounds" / "music.mp3")
